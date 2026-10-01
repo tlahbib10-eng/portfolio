@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="csrf-token" content="ifssdqOdtFT15x0XkVdwTdo3R7ZaY94tvQxH8wV9">
+
+    <meta name="description"
+          content="Lahbib Touahria — Développeur Web Freelance spécialisé en Laravel, applications métier, systèmes de gestion et solutions web sur mesure.">
+
+    <title>
+        Lahbib Touahria — Développeur Web Freelance    </title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --dark: #111827;
+            --dark-soft: #1f2937;
+            --text: #374151;
+            --muted: #6b7280;
+            --light: #f8fafc;
+            --border: #e5e7eb;
+            --accent: #10b981;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+            transition: all .3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--dark);
+            letter-spacing: -0.5px;
+        }
+
+        .navbar-brand span {
+            color: var(--primary);
+        }
+
+        .navbar .nav-link {
+            color: #4b5563;
+            font-size: .92rem;
+            font-weight: 500;
+            margin: 0 .35rem;
+            transition: color .2s ease;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: var(--primary);
+        }
+
+        .btn-contact {
+            background: var(--dark);
+            color: white !important;
+            border-radius: 8px;
+            padding: .55rem 1rem !important;
+        }
+
+        .btn-contact:hover {
+            background: var(--primary);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(37, 99, 235, .10),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    180deg,
+                    #ffffff 0%,
+                    #f8fafc 100%
+                );
+            padding: 100px 0 70px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: #eff6ff;
+            color: var(--primary);
+            border: 1px solid #dbeafe;
+            border-radius: 50px;
+            padding: .45rem .8rem;
+            font-size: .82rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-badge .status {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.05;
+            font-weight: 800;
+            letter-spacing: -2px;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            color: var(--muted);
+            max-width: 680px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: .8rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary-custom {
+            background: var(--primary);
+            border: 1px solid var(--primary);
+            color: white;
+            padding: .75rem 1.3rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all .2s ease;
+        }
+
+        .btn-primary-custom:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline-custom {
+            background: white;
+            border: 1px solid var(--border);
+            color: var(--dark);
+            padding: .75rem 1.3rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all .2s ease;
+        }
+
+        .btn-outline-custom:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* =========================
+           CODE CARD
+        ========================= */
+
+        .code-card {
+            background: #111827;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(17, 24, 39, .18);
+            max-width: 520px;
+            margin: auto;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 13px 16px;
+            background: #1f2937;
+        }
+
+        .code-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #6b7280;
+        }
+
+        .code-title {
+            margin-left: 8px;
+            color: #9ca3af;
+            font-size: .75rem;
+        }
+
+        .code-body {
+            padding: 1.5rem;
+            color: #d1d5db;
+            font-family: 'Courier New', monospace;
+            font-size: .88rem;
+            line-height: 1.9;
+        }
+
+        .code-keyword {
+            color: #c084fc;
+        }
+
+        .code-class {
+            color: #60a5fa;
+        }
+
+        .code-method {
+            color: #34d399;
+        }
+
+        .code-string {
+            color: #fbbf24;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-light {
+            background: var(--light);
+        }
+
+        .section-label {
+            color: var(--primary);
+            font-size: .8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: .6rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            color: var(--muted);
+            max-width: 700px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .service-card {
+            height: 100%;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 2rem;
+            transition: all .25s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #bfdbfe;
+            box-shadow: 0 15px 35px rgba(15, 23, 42, .08);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eff6ff;
+            color: var(--primary);
+            border-radius: 10px;
+            font-size: 1.3rem;
+            margin-bottom: 1.3rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: .7rem;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            margin-bottom: 0;
+            font-size: .92rem;
+        }
+
+        /* =========================
+           PROJECT
+        ========================= */
+
+        .project-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all .25s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, .09);
+        }
+
+        .project-image {
+            min-height: 260px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #1e3a8a,
+                    #2563eb
+                );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .project-image-content {
+            text-align: center;
+        }
+
+        .project-image-content i {
+            font-size: 4rem;
+            opacity: .9;
+            margin-bottom: 1rem;
+        }
+
+        .project-image-content h3 {
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .project-content {
+            padding: 1.8rem;
+        }
+
+        .project-content h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .project-content p {
+            color: var(--muted);
+            font-size: .92rem;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: #f3f4f6;
+            color: #374151;
+            border-radius: 6px;
+            padding: .3rem .55rem;
+            margin: .2rem;
+            font-size: .75rem;
+            font-weight: 600;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skill-box {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            height: 100%;
+        }
+
+        .skill-box h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: .7rem;
+            margin-bottom: .7rem;
+            color: #4b5563;
+            font-size: .9rem;
+        }
+
+        .skill-item i {
+            color: var(--primary);
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-box {
+            background: var(--dark);
+            color: white;
+            border-radius: 18px;
+            padding: 3rem;
+        }
+
+        .about-box h2 {
+            font-weight: 800;
+        }
+
+        .about-box p {
+            color: #d1d5db;
+        }
+
+        .about-stat {
+            border-left: 1px solid #374151;
+            padding-left: 1.2rem;
+        }
+
+        .about-stat strong {
+            display: block;
+            font-size: 1.7rem;
+            color: white;
+        }
+
+        .about-stat span {
+            color: #9ca3af;
+            font-size: .8rem;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-box {
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 18px;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .contact-box p {
+            color: var(--muted);
+            max-width: 600px;
+            margin: 1rem auto 2rem;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--dark);
+            color: #9ca3af;
+            padding: 50px 0 25px;
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 700;
+        }
+
+        footer a {
+            color: #9ca3af;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            margin-top: 35px;
+            padding-top: 20px;
+            font-size: .82rem;
+        }
+
+        /* =========================
+           RTL
+        ========================= */
+
+        [dir="rtl"] {
+            text-align: right;
+        }
+
+        [dir="rtl"] .about-stat {
+            border-left: 0;
+            border-right: 1px solid #374151;
+            padding-left: 0;
+            padding-right: 1.2rem;
+        }
+
+        [dir="rtl"] .navbar .nav-link {
+            margin-left: .35rem;
+            margin-right: .35rem;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 991.98px) {
+
+            .hero {
+                min-height: auto;
+                padding-top: 130px;
+            }
+
+            .hero-code {
+                margin-top: 50px;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .navbar-collapse {
+                padding: 1rem 0;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .about-box {
+                padding: 2rem;
+            }
+
+            .contact-box {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+
+    </head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                Lahbib<span>.</span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#portfolioNavbar"
+                aria-controls="portfolioNavbar"
+                aria-expanded="false"
+                aria-label="Menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+                class="collapse navbar-collapse"
+                id="portfolioNavbar"
+            >
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Accueil
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">
+                            À propos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">
+                            Services
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#projects">
+                            Projets
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#skills">
+                            Compétences
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="nav-link btn-contact" href="index.html#contact">
+                            Me contacter
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main>
+
+        
+    
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-7">
+
+                    <div class="hero-badge">
+                        <span class="status"></span>
+                        Disponible pour de nouveaux projets
+                    </div>
+
+                    <h1>
+                        Développeur Web
+                        <span>Freelance</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Je conçois et développe des applications web modernes,
+                        des systèmes de gestion et des solutions métier sur mesure,
+                        avec une approche centrée sur la simplicité, la performance
+                        et l'expérience utilisateur.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="index.html#projects" class="btn-primary-custom">
+                            <i class="bi bi-folder2-open me-2"></i>
+                            Voir mes projets
+                        </a>
+
+                        <a href="index.html#contact" class="btn-outline-custom">
+                            <i class="bi bi-chat-dots me-2"></i>
+                            Me contacter
+                        </a>
+
+                    </div>
+
+                    <div class="mt-4 text-muted small">
+
+                        <i class="bi bi-code-slash me-1"></i>
+                        Laravel
+
+                        <span class="mx-2">·</span>
+
+                        <i class="bi bi-database me-1"></i>
+                        MySQL
+
+                        <span class="mx-2">·</span>
+
+                        <i class="bi bi-bootstrap me-1"></i>
+                        Bootstrap
+
+                        <span class="mx-2">·</span>
+
+                        <i class="bi bi-box-seam me-1"></i>
+                        Docker
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-5 hero-code">
+
+                    <div class="code-card">
+
+                        <div class="code-header">
+
+                            <span class="code-dot"></span>
+                            <span class="code-dot"></span>
+                            <span class="code-dot"></span>
+
+                            <span class="code-title">
+                                Developer.php
+                            </span>
+
+                        </div>
+
+                        <div class="code-body">
+
+                            <div>
+                                <span class="code-keyword">class</span>
+                                <span class="code-class">Developer</span>
+                            </div>
+
+                            <div>{</div>
+
+                            <div class="ms-3">
+                                <span class="code-keyword">public</span>
+                                $name =
+                                <span class="code-string">
+                                    "LahbibCoding"
+                                </span>;
+                            </div>
+
+                            <div class="ms-3">
+                                <span class="code-keyword">public</span>
+                                $role =
+                                <span class="code-string">
+                                    "Web Developer"
+                                </span>;
+                            </div>
+
+                            <div class="ms-3">
+                                <span class="code-keyword">public</span>
+                                $stack = [
+                            </div>
+
+                            <div class="ms-5">
+                                <span class="code-string">
+                                    "Laravel"
+                                </span>,
+                            </div>
+
+                            <div class="ms-5">
+                                <span class="code-string">
+                                    "PHP"
+                                </span>,
+                            </div>
+
+                            <div class="ms-5">
+                                <span class="code-string">
+                                    "MySQL"
+                                </span>,
+                            </div>
+
+                            <div class="ms-5">
+                                <span class="code-string">
+                                    "Bootstrap"
+                                </span>,
+                            </div>
+
+                            <div class="ms-5">
+                                <span class="code-string">
+                                    "Docker"
+                                </span>
+                            </div>
+
+                            <div class="ms-3">];</div>
+
+                            <div class="ms-3">
+                                <span class="code-keyword">public function</span>
+                                <span class="code-method">
+                                    create()
+                                </span>
+                            </div>
+
+                            <div class="ms-3">{</div>
+
+                            <div class="ms-5">
+                                return
+                                <span class="code-string">
+                                    "Solutions web utiles";
+                                </span>
+                            </div>
+
+                            <div class="ms-3">}</div>
+
+                            <div>}</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="about-box">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-7">
+
+                        <div class="section-label">
+                            À propos
+                        </div>
+
+                        <h2 class="mb-4">
+                            Transformer les besoins métier
+                            en solutions web concrètes.
+                        </h2>
+
+                        <p>
+                            Je suis Lahbib , développeur web freelance.
+                            Je m'intéresse particulièrement aux applications
+                            métier, aux systèmes de gestion et aux plateformes
+                            web qui permettent de simplifier les processus
+                            professionnels.
+                        </p>
+
+                        <p class="mb-0">
+                            Mon approche repose sur Laravel, PHP, MySQL,
+                            Bootstrap, JavaScript, Git et Docker, avec une
+                            attention particulière portée à la structure,
+                            la sécurité, la maintenabilité et l'expérience
+                            utilisateur.
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-5">
+
+                        <div class="row g-4">
+
+                            <div class="col-6">
+                                <div class="about-stat">
+                                    <strong>Laravel</strong>
+                                    <span>Framework principal</span>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="about-stat">
+                                    <strong>Web</strong>
+                                    <span>Applications modernes</span>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="about-stat">
+                                    <strong>ERP</strong>
+                                    <span>Systèmes de gestion</span>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="about-stat">
+                                    <strong>UI/UX</strong>
+                                    <span>Interfaces responsives</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+
+    <section
+        id="services"
+        class="section-light"
+    >
+
+        <div class="container">
+
+            <div class="row mb-5">
+
+                <div class="col-lg-8">
+
+                    <div class="section-label">
+                        Services
+                    </div>
+
+                    <h2 class="section-title">
+                        Des solutions adaptées à vos besoins
+                    </h2>
+
+                    <p class="section-description">
+                        Du développement d'un site web à la réalisation
+                        d'un système de gestion complet, je transforme
+                        vos besoins en solutions simples et évolutives.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            <i class="bi bi-globe2"></i>
+                        </div>
+
+                        <h3>
+                            Développement Web
+                        </h3>
+
+                        <p>
+                            Création de sites et applications web
+                            modernes, rapides, responsives et adaptés
+                            à vos objectifs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            <i class="bi bi-window-stack"></i>
+                        </div>
+
+                        <h3>
+                            Applications métier
+                        </h3>
+
+                        <p>
+                            Développement de solutions permettant
+                            d'organiser, automatiser et suivre
+                            les activités d'une organisation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            <i class="bi bi-palette"></i>
+                        </div>
+
+                        <h3>
+                            UI / UX & Design
+                        </h3>
+
+                        <p>
+                            Conception d'interfaces claires, modernes
+                            et responsives, pensées pour faciliter
+                            l'utilisation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            <i class="bi bi-code-square"></i>
+                        </div>
+
+                        <h3>
+                            Laravel sur mesure
+                        </h3>
+
+                        <p>
+                            Développement d'applications Laravel
+                            structurées, sécurisées et évolutives.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+
+                        <h3>
+                            Systèmes de gestion
+                        </h3>
+
+                        <p>
+                            Conception de plateformes pour gérer
+                            les utilisateurs, données, documents,
+                            processus et activités.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            <i class="bi bi-tools"></i>
+                        </div>
+
+                        <h3>
+                            Maintenance & évolution
+                        </h3>
+
+                        <p>
+                            Correction, amélioration et évolution
+                            d'applications web existantes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="row align-items-end mb-5">
+
+            <div class="col-lg-8">
+
+                <div class="section-label">
+                    Mes projets
+                </div>
+
+                <h2 class="section-title">
+                    Des applications métier conçues
+                    pour répondre aux besoins réels
+                </h2>
+
+                <p class="section-description">
+                    Je conçois des applications web modernes, modulaires
+                    et évolutives, adaptées aux processus et aux besoins
+                    spécifiques de chaque organisation et entreprise.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        
+
+        <div class="row mb-5">
+
+            <div class="col-12">
+
+                <div class="project-card">
+
+                    <div class="project-image">
+
+                        <div class="project-image-content">
+
+                            <i class="bi bi-building-gear"></i>
+
+                            <h3>
+                                SGA
+                            </h3>
+
+                            <p class="mb-0 opacity-75">
+                                Système de Gestion Administrative
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <div class="d-flex justify-content-between
+                                    align-items-start gap-3 flex-wrap">
+
+                            <div>
+
+                                <div class="section-label">
+                                    Application métier
+                                </div>
+
+                                <h3>
+                                    SGA — Système de Gestion Administrative
+                                </h3>
+
+                            </div>
+
+                            <span class="badge bg-success-subtle text-success">
+                                Projet en développement
+                            </span>
+
+                        </div>
+
+
+                        <p class="mt-3">
+                            SGA est une application web conçue pour
+                            digitaliser, centraliser et simplifier
+                            la gestion administrative d'une organisation.
+                        </p>
+
+                        <p>
+                            La solution permet de structurer les processus,
+                            centraliser les informations et faciliter
+                            le suivi des activités grâce à une architecture
+                            modulaire et évolutive.
+                        </p>
+
+
+                        <div class="mt-4">
+
+                            <h6 class="fw-bold mb-3">
+                                Fonctionnalités
+                            </h6>
+
+                            <span class="tech-badge">
+                                Gestion administrative
+                            </span>
+
+                            <span class="tech-badge">
+                                Ressources humaines
+                            </span>
+
+                            <span class="tech-badge">
+                                Gestion documentaire
+                            </span>
+
+                            <span class="tech-badge">
+                                Gestion financière
+                            </span>
+
+                            <span class="tech-badge">
+                                Gestion des projets
+                            </span>
+
+                            <span class="tech-badge">
+                                Suivi des activités
+                            </span>
+
+                            <span class="tech-badge">
+                                Tableaux de bord
+                            </span>
+
+                            <span class="tech-badge">
+                                Utilisateurs
+                            </span>
+
+                            <span class="tech-badge">
+                                Rôles & permissions
+                            </span>
+
+                        </div>
+
+
+                        <div class="mt-4">
+
+                            <h6 class="fw-bold mb-3">
+                                Technologies
+                            </h6>
+
+                            <span class="tech-badge">
+                                Laravel
+                            </span>
+
+                            <span class="tech-badge">
+                                PHP
+                            </span>
+
+                            <span class="tech-badge">
+                                MySQL
+                            </span>
+
+                            <span class="tech-badge">
+                                Bootstrap
+                            </span>
+
+                            <span class="tech-badge">
+                                JavaScript
+                            </span>
+
+                            <span class="tech-badge">
+                                Docker
+                            </span>
+
+                            <span class="tech-badge">
+                                Git
+                            </span>
+
+                        </div>
+
+
+                        <div class="mt-4 p-3 rounded bg-light">
+
+                            <div class="d-flex gap-3">
+
+                                <i class="bi bi-lightbulb text-primary fs-5"></i>
+
+                                <div>
+
+                                    <strong>
+                                        Objectif
+                                    </strong>
+
+                                    <p class="mb-0 mt-1 small text-muted">
+                                        Digitaliser les processus administratifs
+                                        et fournir une plateforme centralisée,
+                                        flexible et évolutive, adaptée aux
+                                        besoins de chaque organisation.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="project-card">
+
+                    <div class="project-image">
+
+                        <div class="project-image-content">
+
+                            <i class="bi bi-cart-check-fill"></i>
+
+                            <h3>
+                                Gestion de vente
+                            </h3>
+
+                            <p class="mb-0 opacity-75">
+                                Gestion commerciale et des ventes
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <div class="d-flex justify-content-between
+                                    align-items-start gap-3 flex-wrap">
+
+                            <div>
+
+                                <div class="section-label">
+                                    Application commerciale
+                                </div>
+
+                                <h3>
+                                    Gestion de vente
+                                </h3>
+
+                            </div>
+
+                            <span class="badge bg-success-subtle text-success">
+                                Projet en développement
+                            </span>
+
+                        </div>
+
+
+                        <p class="mt-3">
+                            Une application web dédiée à la gestion des ventes
+                            et des activités commerciales, conçue pour être
+                            adaptée à différents types de commerces et
+                            d'entreprises.
+                        </p>
+
+                        <p>
+                            La solution peut évoluer selon les besoins de
+                            l'activité : produits, clients, ventes, magasins,
+                            stocks, achats, fournisseurs et suivi commercial.
+                        </p>
+
+
+                        <div class="mt-4">
+
+                            <h6 class="fw-bold mb-3">
+                                Fonctionnalités
+                            </h6>
+
+                            <span class="tech-badge">
+                                Gestion des produits
+                            </span>
+
+                            <span class="tech-badge">
+                                Gestion des clients
+                            </span>
+
+                            <span class="tech-badge">
+                                Gestion des ventes
+                            </span>
+
+                            <span class="tech-badge">
+                                Gestion des magasins
+                            </span>
+
+                            <span class="tech-badge">
+                                Gestion des stocks
+                            </span>
+
+                            <span class="tech-badge">
+                                Gestion des achats
+                            </span>
+
+                            <span class="tech-badge">
+                                Fournisseurs
+                            </span>
+
+                            <span class="tech-badge">
+                                Facturation
+                            </span>
+
+                            <span class="tech-badge">
+                                Suivi commercial
+                            </span>
+
+                            <span class="tech-badge">
+                                Tableaux de bord
+                            </span>
+
+                        </div>
+
+
+                        <div class="mt-4">
+
+                            <h6 class="fw-bold mb-3">
+                                Technologies
+                            </h6>
+
+                            <span class="tech-badge">
+                                Laravel
+                            </span>
+
+                            <span class="tech-badge">
+                                PHP
+                            </span>
+
+                            <span class="tech-badge">
+                                MySQL
+                            </span>
+
+                            <span class="tech-badge">
+                                Bootstrap
+                            </span>
+
+                            <span class="tech-badge">
+                                JavaScript
+                            </span>
+
+                            <span class="tech-badge">
+                                Docker
+                            </span>
+
+                            <span class="tech-badge">
+                                Git
+                            </span>
+
+                        </div>
+
+
+                        <div class="mt-4 p-3 rounded bg-light">
+
+                            <div class="d-flex gap-3">
+
+                                <i class="bi bi-lightbulb text-primary fs-5"></i>
+
+                                <div>
+
+                                    <strong>
+                                        Objectif
+                                    </strong>
+
+                                    <p class="mb-0 mt-1 small text-muted">
+                                        Proposer une solution de gestion des
+                                        ventes flexible et personnalisable,
+                                        capable de s'adapter aux différents
+                                        types de commerce et aux besoins
+                                        spécifiques de chaque activité.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    
+
+    <section
+        id="skills"
+        class="section-light"
+    >
+
+        <div class="container">
+
+            <div class="row mb-5">
+
+                <div class="col-lg-8">
+
+                    <div class="section-label">
+                        Compétences
+                    </div>
+
+                    <h2 class="section-title">
+                        Technologies & outils
+                    </h2>
+
+                    <p class="section-description">
+                        Une stack orientée développement web moderne,
+                        applications métier et environnements professionnels.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="skill-box">
+
+                        <h3>
+                            Backend
+                        </h3>
+
+                        <div class="skill-item">
+                            <i class="bi bi-check2"></i>
+                            PHP
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="bi bi-check2"></i>
+                            Laravel
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="bi bi-check2"></i>
+                            MySQL
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="skill-box">
+
+                        <h3>
+                            Frontend
+                        </h3>
+
+                        <div class="skill-item">
+                            <i class="bi bi-check2"></i>
+                            HTML / CSS
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="bi bi-check2"></i>
+                            Bootstrap
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="bi bi-check2"></i>
+                            JavaScript
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="skill-box">
+
+                        <h3>
+                            Outils
+                        </h3>
+
+                        <div class="skill-item">
+                            <i class="bi bi-check2"></i>
+                            Git
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="bi bi-check2"></i>
+                            GitHub
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="bi bi-check2"></i>
+                            Docker
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="skill-box">
+
+                        <h3>
+                            Conception
+                        </h3>
+
+                        <div class="skill-item">
+                            <i class="bi bi-check2"></i>
+                            UI / UX
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="bi bi-check2"></i>
+                            Responsive
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="bi bi-check2"></i>
+                            Architecture web
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <div class="section-label">
+                    Contact
+                </div>
+
+                <h2>
+                    Vous avez un projet ?
+                </h2>
+
+                <p>
+                    Vous recherchez un développeur pour créer une
+                    application web, moderniser un système existant
+                    ou transformer une idée en solution concrète ?
+                    Parlons-en.
+                </p>
+
+                <a
+                    href="mailto:tlahbib10@gmail.com"
+                    class="btn-primary-custom"
+                >
+                    <i class="bi bi-envelope me-2"></i>
+                    Me contacter
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-5">
+
+                    <h5 class="mb-3">
+                        Lahbib Touahria
+                    </h5>
+
+                    <p class="mb-0">
+                        Développeur Web Freelance spécialisé dans
+                        la création d'applications web, de systèmes
+                        de gestion et de solutions métier sur mesure.
+                    </p>
+
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <h5 class="mb-3">
+                        Navigation
+                    </h5>
+
+                    <ul class="list-unstyled mb-0">
+
+                        <li class="mb-2">
+                            <a href="index.html">
+                                Accueil
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="index.html#about">
+                                À propos
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="index.html#services">
+                                Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#projects">
+                                Projets
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+
+                    <h5 class="mb-3">
+                        Technologies
+                    </h5>
+
+                    <p class="mb-0">
+                        Laravel · PHP · MySQL · Bootstrap · JavaScript ·
+                        Git · GitHub · Docker
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom text-center">
+
+                © 2026 Lahbib Touahria.
+                Tous droits réservés.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    
+</body>
+
+</html>
+
