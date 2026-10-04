@@ -611,8 +611,17 @@
         <div class="container">
 
             <a class="navbar-brand" href="{{ url('/') }}">
-                Lahbib     tel:+213699060385 <span>.</span>
+                   Lahbib<span>.</span>
             </a>
+
+           <a
+               href="tel:+213699060385"
+               class="ms-3 text-decoration-none text-dark"
+               title="Appeler Lahbib"
+            >
+             <i class="bi bi-telephone-fill me-1"></i>
+                +213 699 060 385
+             </a>
 
             <button
                 class="navbar-toggler"
