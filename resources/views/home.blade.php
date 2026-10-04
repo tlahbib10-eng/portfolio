@@ -23,9 +23,7 @@
                         Disponible pour de nouveaux projets
                     </div>
 
-                    sodium_add
-
-                    <h1>
+                     <h1>
                         Développeur Web
                         <span>Freelance</span>
                     </h1>
