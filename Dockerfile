@@ -34,7 +34,8 @@ RUN npm ci && npm run build
 RUN chown -R www-data:www-data \
     storage \
     bootstrap/cache \
-    public
+    public \
+    database
 
 RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|' \
     /etc/apache2/sites-available/000-default.conf
