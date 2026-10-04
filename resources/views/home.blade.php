@@ -1049,6 +1049,12 @@
                     ou transformer une idée en solution concrète ?
                     Parlons-en.
                 </p>
+                <div class="mt-4 mb-4">
+                   <a href="tel:+213699060385" class="text-decoration-none">
+                      <i class="bi bi-telephone-fill me-2"></i>
+                       +213 699 060 385
+                    </a>
+                 </div>
 
                <button
                      type="button"

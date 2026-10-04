@@ -611,7 +611,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="{{ url('/') }}">
-                Lahbib<span>.</span>
+                Lahbib     tel:+213699060385 <span>.</span>
             </a>
 
             <button
