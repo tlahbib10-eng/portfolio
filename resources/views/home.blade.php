@@ -468,209 +468,115 @@
      PROJECTS
 ========================== --}}
 
-<section id="projects">
+<section id="projects" class="py-5">
 
     <div class="container">
 
-        <div class="row align-items-end mb-5">
-
+        {{-- Section title --}}
+        <div class="row mb-5">
             <div class="col-lg-8">
+                <span class="text-uppercase small fw-semibold">
+                    Mes réalisations
+                </span>
 
-                <div class="section-label">
+                <h2 class="display-6 fw-bold mt-2">
                     Mes projets
-                </div>
-
-                <h2 class="section-title">
-                    Des applications métier conçues
-                    pour répondre aux besoins réels
                 </h2>
 
-                <p class="section-description">
-                    Je conçois des applications web modernes, modulaires
-                    et évolutives, adaptées aux processus et aux besoins
-                    spécifiques de chaque organisation et entreprise.
+                <p class="text-muted mt-3">
+                    Découvrez quelques applications web et solutions métier
+                    que j’ai conçues et développées pour répondre à des
+                    besoins professionnels concrets.
                 </p>
-
             </div>
-
         </div>
 
 
-        {{-- =========================
-             PROJET 1 — SGA
-        ========================== --}}
 
-        <div class="row mb-5">
+        {{-- =====================================================
+             PROJECT 1 : SGA
+        ====================================================== --}}
 
-            <div class="col-12">
+        <div class="project-item mb-5 pb-5 border-bottom">
 
-                <div class="project-card">
+            <div class="row align-items-center g-4">
 
-                    <div class="project-image">
+                {{-- Main screenshot --}}
+                <div class="col-lg-6 order-lg-2">
 
-                        <div class="project-image-content">
+                    <div class="project-image rounded-4 overflow-hidden shadow-sm">
 
-                            <i class="bi bi-building-gear"></i>
+                        <a href="{{ asset('images/projects/sga/sga-dashboard.jpg') }}"
+                           data-bs-toggle="modal"
+                           data-bs-target="#sgaGallery">
 
-                            <h3>
-                                SGA
-                            </h3>
+                            <img
+                                src="{{ asset('images/projects/sga/sga-dashboard.jpg') }}"
+                                class="img-fluid w-100"
+                                alt="SGA - Tableau de bord"
+                            >
 
-                            <p class="mb-0 opacity-75">
-                                Système de Gestion Administrative
-                            </p>
+                        </a>
 
-                        </div>
+                    </div>
+
+                </div>
+
+
+                {{-- Project information --}}
+                <div class="col-lg-6 order-lg-1">
+
+                    <span class="badge text-bg-dark mb-3">
+                        Application de gestion
+                    </span>
+
+                    <h3 class="fw-bold">
+                        SGA
+                    </h3>
+
+                    <h5 class="text-muted mb-3">
+                        Application de gestion
+                    </h5>
+
+                    <p class="text-muted">
+                        Une application de gestion conçue pour centraliser
+                        les opérations, faciliter le suivi des activités
+                        et améliorer la gestion quotidienne.
+                    </p>
+
+                    <div class="mb-4">
+
+                        <span class="badge bg-light text-dark border me-1 mb-1">
+                            Laravel
+                        </span>
+
+                        <span class="badge bg-light text-dark border me-1 mb-1">
+                            PHP
+                        </span>
+
+                        <span class="badge bg-light text-dark border me-1 mb-1">
+                            MySQL
+                        </span>
+
+                        <span class="badge bg-light text-dark border me-1 mb-1">
+                            Bootstrap
+                        </span>
+
+                        <span class="badge bg-light text-dark border me-1 mb-1">
+                            JavaScript
+                        </span>
 
                     </div>
 
-
-                    <div class="project-content">
-
-                        <div class="d-flex justify-content-between
-                                    align-items-start gap-3 flex-wrap">
-
-                            <div>
-
-                                <div class="section-label">
-                                    Application métier
-                                </div>
-
-                                <h3>
-                                    SGA — Système de Gestion Administrative
-                                </h3>
-
-                            </div>
-
-                            <span class="badge bg-success-subtle text-success">
-                                Projet en développement
-                            </span>
-
-                        </div>
-
-
-                        <p class="mt-3">
-                            SGA est une application web conçue pour
-                            digitaliser, centraliser et simplifier
-                            la gestion administrative d'une organisation.
-                        </p>
-
-                        <p>
-                            La solution permet de structurer les processus,
-                            centraliser les informations et faciliter
-                            le suivi des activités grâce à une architecture
-                            modulaire et évolutive.
-                        </p>
-
-
-                        <div class="mt-4">
-
-                            <h6 class="fw-bold mb-3">
-                                Fonctionnalités
-                            </h6>
-
-                            <span class="tech-badge">
-                                Gestion administrative
-                            </span>
-
-                            <span class="tech-badge">
-                                Ressources humaines
-                            </span>
-
-                            <span class="tech-badge">
-                                Gestion documentaire
-                            </span>
-
-                            <span class="tech-badge">
-                                Gestion financière
-                            </span>
-
-                            <span class="tech-badge">
-                                Gestion des projets
-                            </span>
-
-                            <span class="tech-badge">
-                                Suivi des activités
-                            </span>
-
-                            <span class="tech-badge">
-                                Tableaux de bord
-                            </span>
-
-                            <span class="tech-badge">
-                                Utilisateurs
-                            </span>
-
-                            <span class="tech-badge">
-                                Rôles & permissions
-                            </span>
-
-                        </div>
-
-
-                        <div class="mt-4">
-
-                            <h6 class="fw-bold mb-3">
-                                Technologies
-                            </h6>
-
-                            <span class="tech-badge">
-                                Laravel
-                            </span>
-
-                            <span class="tech-badge">
-                                PHP
-                            </span>
-
-                            <span class="tech-badge">
-                                MySQL
-                            </span>
-
-                            <span class="tech-badge">
-                                Bootstrap
-                            </span>
-
-                            <span class="tech-badge">
-                                JavaScript
-                            </span>
-
-                            <span class="tech-badge">
-                                Docker
-                            </span>
-
-                            <span class="tech-badge">
-                                Git
-                            </span>
-
-                        </div>
-
-
-                        <div class="mt-4 p-3 rounded bg-light">
-
-                            <div class="d-flex gap-3">
-
-                                <i class="bi bi-lightbulb text-primary fs-5"></i>
-
-                                <div>
-
-                                    <strong>
-                                        Objectif
-                                    </strong>
-
-                                    <p class="mb-0 mt-1 small text-muted">
-                                        Digitaliser les processus administratifs
-                                        et fournir une plateforme centralisée,
-                                        flexible et évolutive, adaptée aux
-                                        besoins de chaque organisation.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
+                    <button
+                        type="button"
+                        class="btn btn-dark"
+                        data-bs-toggle="modal"
+                        data-bs-target="#sgaGallery"
+                    >
+                        <i class="bi bi-images me-2"></i>
+                        Voir les captures
+                    </button>
 
                 </div>
 
@@ -679,184 +585,223 @@
         </div>
 
 
-        {{-- =========================
-             PROJET 2 — GESTION DE VENTE
-        ========================== --}}
+        {{-- =====================================================
+             PROJECT 2 : GESTION DES VENTES
+        ====================================================== --}}
 
-        <div class="row">
+        <div class="project-item mb-5">
 
-            <div class="col-12">
+            <div class="row align-items-center g-4">
 
-                <div class="project-card">
+                {{-- Main screenshot --}}
+                <div class="col-lg-6">
 
-                    <div class="project-image">
+                    <div class="project-image rounded-4 overflow-hidden shadow-sm">
 
-                        <div class="project-image-content">
+                        <a href="{{ asset('images/projects/ventes/ventes-dashboard.jpg') }}"
+                           data-bs-toggle="modal"
+                           data-bs-target="#ventesGallery">
 
-                            <i class="bi bi-cart-check-fill"></i>
+                            <img
+                                src="{{ asset('images/projects/ventes/ventes-dashboard.jpg') }}"
+                                class="img-fluid w-100"
+                                alt="Gestion des ventes - Tableau de bord"
+                            >
 
-                            <h3>
-                                Gestion de vente
-                            </h3>
-
-                            <p class="mb-0 opacity-75">
-                                Gestion commerciale et des ventes
-                            </p>
-
-                        </div>
+                        </a>
 
                     </div>
 
+                </div>
 
-                    <div class="project-content">
 
-                        <div class="d-flex justify-content-between
-                                    align-items-start gap-3 flex-wrap">
+                {{-- Project information --}}
+                <div class="col-lg-6">
 
-                            <div>
+                    <span class="badge text-bg-dark mb-3">
+                        Solution commerciale
+                    </span>
 
-                                <div class="section-label">
-                                    Application commerciale
-                                </div>
+                    <h3 class="fw-bold">
+                        Gestion des ventes
+                    </h3>
 
-                                <h3>
-                                    Gestion de vente
-                                </h3>
+                    <h5 class="text-muted mb-3">
+                        Application de gestion commerciale
+                    </h5>
 
-                            </div>
+                    <p class="text-muted">
+                        Une solution de gestion commerciale conçue pour
+                        s’adapter aux différents types d’activités et
+                        besoins liés à la vente et au commerce.
+                    </p>
 
-                            <span class="badge bg-success-subtle text-success">
-                                Projet en développement
-                            </span>
+                    <div class="mb-4">
 
+                        <span class="badge bg-light text-dark border me-1 mb-1">
+                            Laravel
+                        </span>
+
+                        <span class="badge bg-light text-dark border me-1 mb-1">
+                            PHP
+                        </span>
+
+                        <span class="badge bg-light text-dark border me-1 mb-1">
+                            MySQL
+                        </span>
+
+                        <span class="badge bg-light text-dark border me-1 mb-1">
+                            Bootstrap
+                        </span>
+
+                        <span class="badge bg-light text-dark border me-1 mb-1">
+                            JavaScript
+                        </span>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn btn-dark"
+                        data-bs-toggle="modal"
+                        data-bs-target="#ventesGallery"
+                    >
+                        <i class="bi bi-images me-2"></i>
+                        Voir les captures
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    {{-- =========================================================
+         MODAL : SGA GALLERY
+    ========================================================== --}}
+
+    <div
+        class="modal fade"
+        id="sgaGallery"
+        tabindex="-1"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+
+            <div class="modal-content border-0">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title fw-bold">
+                        SGA — Captures de l'application
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Fermer"
+                    ></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <img
+                                src="{{ asset('images/projects/sga/erp.sgd.jpg') }}"
+                                class="img-fluid rounded-3"
+                                alt="SGA - Tableau de bord"
+                            >
                         </div>
 
-
-                        <p class="mt-3">
-                            Une application web dédiée à la gestion des ventes
-                            et des activités commerciales, conçue pour être
-                            adaptée à différents types de commerces et
-                            d'entreprises.
-                        </p>
-
-                        <p>
-                            La solution peut évoluer selon les besoins de
-                            l'activité : produits, clients, ventes, magasins,
-                            stocks, achats, fournisseurs et suivi commercial.
-                        </p>
-
-
-                        <div class="mt-4">
-
-                            <h6 class="fw-bold mb-3">
-                                Fonctionnalités
-                            </h6>
-
-                            <span class="tech-badge">
-                                Gestion des produits
-                            </span>
-
-                            <span class="tech-badge">
-                                Gestion des clients
-                            </span>
-
-                            <span class="tech-badge">
-                                Gestion des ventes
-                            </span>
-
-                            <span class="tech-badge">
-                                Gestion des magasins
-                            </span>
-
-                            <span class="tech-badge">
-                                Gestion des stocks
-                            </span>
-
-                            <span class="tech-badge">
-                                Gestion des achats
-                            </span>
-
-                            <span class="tech-badge">
-                                Fournisseurs
-                            </span>
-
-                            <span class="tech-badge">
-                                Facturation
-                            </span>
-
-                            <span class="tech-badge">
-                                Suivi commercial
-                            </span>
-
-                            <span class="tech-badge">
-                                Tableaux de bord
-                            </span>
-
+                        <div class="col-md-6">
+                            <img
+                                src="{{ asset('images/projects/sga/sgd.home.jpg') }}"
+                                class="img-fluid rounded-3"
+                                alt="SGA - Utilisateurs"
+                            >
                         </div>
 
+                        
+                    </div>
 
-                        <div class="mt-4">
+                </div>
 
-                            <h6 class="fw-bold mb-3">
-                                Technologies
-                            </h6>
+            </div>
 
-                            <span class="tech-badge">
-                                Laravel
-                            </span>
+        </div>
 
-                            <span class="tech-badge">
-                                PHP
-                            </span>
+    </div>
 
-                            <span class="tech-badge">
-                                MySQL
-                            </span>
 
-                            <span class="tech-badge">
-                                Bootstrap
-                            </span>
+    {{-- =========================================================
+         MODAL : GESTION DES VENTES GALLERY
+    ========================================================== --}}
 
-                            <span class="tech-badge">
-                                JavaScript
-                            </span>
+    <div
+        class="modal fade"
+        id="ventesGallery"
+        tabindex="-1"
+        aria-hidden="true"
+    >
 
-                            <span class="tech-badge">
-                                Docker
-                            </span>
+        <div class="modal-dialog modal-xl modal-dialog-centered">
 
-                            <span class="tech-badge">
-                                Git
-                            </span>
+            <div class="modal-content border-0">
 
+                <div class="modal-header">
+
+                    <h5 class="modal-title fw-bold">
+                        Gestion des ventes — Captures
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Fermer"
+                    ></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <img
+                                src="{{ asset('images/projects/ventes/vent.dashb.jpg') }}"
+                                class="img-fluid rounded-3"
+                                alt="Gestion des ventes - Tableau de bord"
+                            >
                         </div>
 
-
-                        <div class="mt-4 p-3 rounded bg-light">
-
-                            <div class="d-flex gap-3">
-
-                                <i class="bi bi-lightbulb text-primary fs-5"></i>
-
-                                <div>
-
-                                    <strong>
-                                        Objectif
-                                    </strong>
-
-                                    <p class="mb-0 mt-1 small text-muted">
-                                        Proposer une solution de gestion des
-                                        ventes flexible et personnalisable,
-                                        capable de s'adapter aux différents
-                                        types de commerce et aux besoins
-                                        spécifiques de chaque activité.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
+                        <div class="col-md-6">
+                            <img
+                                src="{{ asset('images/projects/ventes/vente login.jpg') }}"
+                                class="img-fluid rounded-3"
+                                alt="Gestion des ventes - Produits"
+                            >
                         </div>
+
+                        <div class="col-md-6">
+                            <img
+                                src="{{ asset('images/projects/ventes/vente.creat.jpg') }}"
+                                class="img-fluid rounded-3"
+                                alt="Gestion des ventes - Ventes"
+                            >
+                        </div>
+
+                       
 
                     </div>
 
